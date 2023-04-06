@@ -1,0 +1,12 @@
+package com.uniTech.uniTechTask.repository;
+
+import com.uniTech.uniTechTask.model.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface UserRepository extends JpaRepository<Users, Long> {
+    Optional<Users> findByPin(String pin);
+}
